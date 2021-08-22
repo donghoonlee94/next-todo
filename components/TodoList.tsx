@@ -203,6 +203,16 @@ const TodoList: React.FC<IProps> = ({ todos }) => {
           ))}
         </div>
       </div>
+      <ul className="todo-list">
+        {todos.map(todo => (
+          <li className="todo-item" key={todo.id}>
+            <div className="todo-left-side">
+              <div className={`todo-color-block bg=${todo.color}`} />
+              <p className={`todo-text ${todo.checked ? 'checked-todo-text' : ''}`}>{todo.text}</p>
+            </div>
+          </li>
+        ))}
+      </ul>
     </Container>
   );
 };
