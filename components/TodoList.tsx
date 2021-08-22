@@ -210,6 +210,11 @@ const TodoList: React.FC<IProps> = ({ todos }) => {
               <div className={`todo-color-block bg=${todo.color}`} />
               <p className={`todo-text ${todo.checked ? 'checked-todo-text' : ''}`}>{todo.text}</p>
             </div>
+            <div className="todo-right-side">
+              {!todo.checked && (
+                <button type="button" className="todo-button" onClick={() => {}}></button>
+              )}
+            </div>
           </li>
         ))}
       </ul>
