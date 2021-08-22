@@ -3,6 +3,8 @@ import styled from "styled-components";
 import palette from "../styles/palette";
 import { TodoType } from "../types/todo";
 import { useCallback, useMemo } from 'react';
+import TrashCanIcon from '../public/static/svg/trash_can.svg';
+import CheckMarkIcon from '../public/static/svg/check_mark.svg';
 
 interface IProps {
   todos: TodoType[];
