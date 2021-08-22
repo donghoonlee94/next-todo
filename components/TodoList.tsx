@@ -213,6 +213,12 @@ const TodoList: React.FC<IProps> = ({ todos }) => {
               <p className={`todo-text ${todo.checked ? 'checked-todo-text' : ''}`}>{todo.text}</p>
             </div>
             <div className="todo-right-side">
+              {todo.checked && (
+                <>
+                  <TrashCanIcon className="todo-trash-can" onClick={() => {}} />
+                  <CheckMarkIcon className="todo-check-mark" onClick={() => {}} />
+                </>
+              )}
               {!todo.checked && (
                 <button type="button" className="todo-button" onClick={() => {}}></button>
               )}
